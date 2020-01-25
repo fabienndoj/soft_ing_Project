@@ -1,0 +1,162 @@
+/* Color
+  DarkPurle:#2d132c;
+  MediumPurple:#801336;
+  LightPurple:#c72c41;
+  Pink-ish:#ee4540;
+
+  Jehshil_Dark:3e432e;
+  Jehshil_Medium:616f39;
+  Jehsil_Light:a7d129;
+
+  text__color--cremy:#dbedf3;
+  Main_Font_Color: #dbedf3;
+  Main_Hover_Color:#ff971d;
+*/
+
+*,
+*::after,
+*::before,:focus{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  /* gets rid of padding and border when measuring width and height */ }
+
+html {
+  font-size: 62.5%;
+  /*Default browser value=16--->16/10==.625*/
+  /* we want 10 px general value*/ }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  /* padding: 3rem; */
+  background-image:repeating-linear-gradient(to bottom right,#2d132c, rgb(199, 44, 65));
+}
+
+/******Header dhe NavBar******/
+header{
+  background-color: rgb(0, 0, 0,0.4);
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+nav li{
+  display: inline-block;
+  text-decoration: none;
+  margin:.5rem;
+}
+nav a,nav a:active,nav a:visited{
+text-decoration: none;
+color: #dbedf3;
+}
+
+nav a:hover{
+  color:#ff971d;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+.UserLogout{
+  float: right;
+}
+/******************* Search to order the rankings *********************************/
+.searchbox{
+    position: relative;
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 4rem 1rem;
+    background-color: rgb(17, 17, 17,.45);
+    height: 20rem;
+}
+form{
+    position: relative;
+}
+#rankingSearch{
+    background-color: rgb(0, 0, 0);
+    border-radius: 25rem;
+    width: 25%;
+    color:#dbedf3;
+    text-align: center;
+    margin: 2rem auto;
+    padding: 0.5rem;
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all .5s;
+}
+#rankingSearch:active,#rankingSearch:hover{
+    width:70%;
+}
+.SearchBox select,#searchButton{
+    background-color: rgb(0, 0, 0);
+    border-radius: 25rem;
+    width: 20%;
+    color:#dbedf3;
+    text-align: center;
+    margin: 2rem 0 0 0;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* ********************************************************************** */
+.list{
+  display: grid;        /*E ben Grid Per elementet e monthlyBest qe te kene 3 kolona cdo rresht*/
+  grid-template-columns: auto auto auto;
+}
+  /*Elementet e Grid per MonthlyBest*/
+    .Element{
+      text-align: center;
+      height: fit-content;
+      background-image: linear-gradient(to bottom,rgb(211, 244, 255),rgb(85, 10, 70,.5));
+      margin: 1rem auto;
+      padding-bottom: 1rem;
+      border-radius: 2rem;
+    }
+    .Element:hover{
+      transform: scale(1.05);
+      background-image: linear-gradient(to bottom,rgb(0, 0, 0,.4),rgb(67, 67, 67,.4));
+    }
+    .Element div{
+      display: block;
+      font-size: 2rem;
+      color: #dbedf3;
+      margin: .5rem;
+    }
+    .Element img{
+      width: 33rem;
+      height: 50rem;
+    }
+    .Element__nameAndInput{
+      position:bottom;
+    }
+     /* Dy menyrat e inputit ne Description */
+    .ratingSelect{
+      background-color:rgb(254, 135, 97,.5) ;
+      color: #dbedf3;
+      border-radius: 4rem;
+      font-size: 1.6rem;
+      text-align: center;
+      font-weight: 500;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .ratingSelect option{
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+    }
+    .suggest{background-color:rgb(64, 191, 193,0.8) ;
+      color: #2d132c;
+      border-radius: 4rem;
+      font-size: 1.6rem;
+      text-align: center;
+      font-weight: 500;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    .suggest:hover{
+        transform: translateY(-.3rem);    /*Zhvendos butonin .3 pixel lart kur behet Hover*/
+        box-shadow:0 .5rem 4rem rgb(0, 0, 0,.9);
+      }
+    .suggest:active{transform: translateY(0rem);}

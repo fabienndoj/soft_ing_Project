@@ -1,0 +1,53 @@
+ 
+	Universiteti Politeknik i Tiranes
+Fakulteti i Teknologjise se Informacionit
+Dega: Inxhinieri Informatike
+Viti Akademik 2019-2020
+Grupi IIIB
+
+1.Prezantimi
+
+Qellimi I krijimit te ketij dokumenti eshte qe te krijohet nje koncept siperfaqesore  baze per faqen qe do ndertohet.Gjithashtu tentohet te jepen cilesimet funksionale dhe jofunksionale si dhe disa skema per te lehtesuar se si do perdoret faqja.
+
+Faqja vete do jete nje faqe qe liston filmat te rinj dhe qe lejon nje perdorues qe ti rankoje ato sipas preferenceva te veta bazuar ne shijet personale.
+Kjo faqe synon te lehtesoj gjetjen e filmave te pershtatshem per dashesit e kinemase.
+
+
+2.Specifikimi i Kerkesave
+Ky website do projektohet sipas modelit Client-Server.
+Do jete I aksesueshem nga perdorues te rregjistruar(User),perdorues te paregjistruar(Guest) dhe nga nje menaxher I faqes(Admin).
+        	2.1.Kerkesat Funksionale
+User Requirements
+1.Menaxheri i faqes hedh nje liste me filma,te cilat mund te vezhgohen nga perodruesit dhe qe mund te ju jepen vleresime per ti rradhitur ata bazuar te keto vleresime.Keta filma mund te sugjerohen nga perdoruesit ose dhe vete menaxheri i faqes.Gjithashtu,sipas deshires te perdoruesit mund te krijoj nje liste me filma te cilet I duken interesant dhe deshiron ti shoh,qe quhet “to Watch List”.
+
+System Requirements
+1.Admini i faqes hedh cdo muaj nje liste te re me filma qe mendon se jane te pershtatshem ku perfshihen posteri zyrtare,informacionet ekstra dhe nje link qe hap trailerin e filmit.
+2.Ne faqen kryesore shfaqen filmat te rradhitura ne rrjeshta me nga tre elemente.
+3.Per te bere login nevoitet email ose numri I telefonit dhe nje password qe te kete minimalisht  	8 shkronja,dhe maksimalisht 32.
+4.Pasi hapet faqja me me shume informacion per filmin mund ti jepet nje vlere nga perdoruesi qe tregon opinionin e tij,qe eshte nje input i tipit numer me vlera nga 1 deri ne 10
+5.Pasi hapet faqja me informacionin ekstra te filmit mund te klikohet nje buton me emer “Suggest” qe e shton te profile I perodruesit sin je film qe pelqehet nga ai,dhe deshiron te ua sugjeroj perdoruesve te tjere.
+6.Perdoruesi mund te kerkoj filmin duke shkruar titullin e tij te faqja kryesore,te pjesa me titull “Search”.
+2.2.Kerkesat Jo-Funksionale
+
+·         Aksesimi
+Do te aksesohet ne real time.
+·         Platforma
+Do te jete i disponueshem nga cdo browser
+·         Koha e Dispozicionit
+Do jete i disponueshem cdo dite te javes per njezet e kater ore (24/7)
+·         Pergjigjshmeria
+Do jete pergjigje sa me e shpejte te jete e mundur.
+·         Performanca
+Te lejoj aksesimin e faqes e te pakten 500 perdoruesve.
+·         Burimet Software
+Sistemi Operativ : Windows
+HTML,JavaScript,CSS:Per modelimin e faqes dhe krijimin e faqes dinamike.
+Privatesia:Askush pervec perdoruesit nuk mund ti aksesoje te dhenat e tij.
+3.Use Case
+ 
+ 
+4.Diagrama Sekuenciale
+
+
+
+

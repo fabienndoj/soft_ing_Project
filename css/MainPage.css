@@ -1,0 +1,70 @@
+/* Color
+  DarkPurle:#2d132c;
+  MediumPurple:#801336;
+  LightPurple:#c72c41;
+  Pink-ish:#ee4540;
+
+  text__color--cremy:#dbedf3;
+  Main_Font_Color: #dbedf3;
+  Main_Hover_Color:#ff971d;
+*/
+
+*,
+*::after,
+*::before,:focus{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  /* gets rid of padding and border when measuring width and height */ }
+
+html {
+  font-size: 62.5%;
+  /*Default browser value=16--->16/10==.625*/
+  /* we want 10 px general value*/ }
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777;
+  /* padding: 3rem; */
+  background-image:repeating-linear-gradient(to bottom right,#2d132c, rgb(199, 44, 65));
+}
+
+/******Header dhe NavBar******/
+header{
+  background-color: rgb(0, 0, 0,0.4);
+  font-size: 1.6rem;
+  margin-top: 0;
+}
+nav li{
+  display: inline-block;
+  text-decoration: none;
+  margin:.5rem;
+}
+nav a,nav a:active,nav a:visited{
+text-decoration: none;
+color: #dbedf3;
+}
+
+nav a:hover{
+  color:#ff971d;
+  font-size: 1.7rem;
+  border-radius: .5rem;
+}
+.loginSingup{float: right;}
+/* Body */
+div{
+  font-size: 2rem;
+  text-align: center;
+  color: #ff971d;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+}
+section{
+  font-size: 2.5rem;
+  text-align: center;
+  color: #ee4540;
+}
