@@ -1,9 +1,3 @@
- 
-	Universiteti Politeknik i Tiranes
-Fakulteti i Teknologjise se Informacionit
-Dega: Inxhinieri Informatike
-Viti Akademik 2019-2020
-Grupi IIIB
 
 1.Prezantimi
 
@@ -18,16 +12,16 @@ Ky website do projektohet sipas modelit Client-Server.
 Do jete I aksesueshem nga perdorues te rregjistruar(User),perdorues te paregjistruar(Guest) dhe nga nje menaxher I faqes(Admin).
         	2.1.Kerkesat Funksionale
 User Requirements
-1.Menaxheri i faqes hedh nje liste me filma,te cilat mund te vezhgohen nga perodruesit dhe qe mund te ju jepen vleresime per ti rradhitur ata bazuar te keto vleresime.Keta filma mund te sugjerohen nga perdoruesit ose dhe vete menaxheri i faqes.Gjithashtu,sipas deshires te perdoruesit mund te krijoj nje liste me filma te cilet I duken interesant dhe deshiron ti shoh,qe quhet “to Watch List”.
+1.Menaxheri i faqes hedh nje liste me filma,te cilat mund te vezhgohen nga perdoruesit dhe qe mund te ju jepen vleresime per ti rradhitur ata bazuar te keto vleresime.Keta filma mund te sugjerohen nga perdoruesit ose dhe vete menaxheri i faqes.Gjithashtu,sipas deshires te perdoruesit mund te krijoj nje liste me filma te cilet I duken interesant dhe deshiron ti shoh,qe quhet “to Watch List”.
 
 System Requirements
 1.Admini i faqes hedh cdo muaj nje liste te re me filma qe mendon se jane te pershtatshem ku perfshihen posteri zyrtare,informacionet ekstra dhe nje link qe hap trailerin e filmit.
 2.Ne faqen kryesore shfaqen filmat te rradhitura ne rrjeshta me nga tre elemente.
-3.Per te bere login nevoitet email ose numri I telefonit dhe nje password qe te kete minimalisht  	8 shkronja,dhe maksimalisht 32.
+3.Per te bere login nevoitet email ose numri I telefonit dhe nje password qe te kete minimalisht  8 shkronja,dhe maksimalisht 32.
 4.Pasi hapet faqja me me shume informacion per filmin mund ti jepet nje vlere nga perdoruesi qe tregon opinionin e tij,qe eshte nje input i tipit numer me vlera nga 1 deri ne 10
-5.Pasi hapet faqja me informacionin ekstra te filmit mund te klikohet nje buton me emer “Suggest” qe e shton te profile I perodruesit sin je film qe pelqehet nga ai,dhe deshiron te ua sugjeroj perdoruesve te tjere.
+5.Pasi hapet faqja me informacionin ekstra te filmit mund te klikohet nje buton me emer “Suggest” qe e shton te profile I perdoruesit si nje film qe pelqehet nga ai,dhe deshiron te ua sugjeroj perdoruesve te tjere.
 6.Perdoruesi mund te kerkoj filmin duke shkruar titullin e tij te faqja kryesore,te pjesa me titull “Search”.
-2.2.Kerkesat Jo-Funksionale
+	2.2.Kerkesat Jo-Funksionale
 
 ·         Aksesimi
 Do te aksesohet ne real time.

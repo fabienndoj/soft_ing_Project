@@ -60,7 +60,7 @@ nav a:hover{
 /* SearchBox */
 #searchBox{
   background: rgb(0, 0, 0,.3);
-  width: 5rem;
+  width: 6.5rem;
   padding: 1rem;
   margin: 2rem;
   display: block;
@@ -82,8 +82,8 @@ nav a:hover{
   background-image: linear-gradient(to right,#000000,rgb(237, 141, 141,.1));
 }
 
-/***********Monthly Best Section*************/
-.monthlyBest{
+/***********year  Best Section*************/
+.year Best{
   margin-top: 2rem;
 }
 .section__Header{
@@ -104,10 +104,10 @@ nav a:hover{
 
 /* Sistemi i Grid me 3 kolona per cdo rrjesht */
 .list{
-  display: grid;        /*E ben Grid Per elementet e monthlyBest qe te kene 3 kolona cdo rresht*/
+  display: grid;        /*E ben Grid  qe te kene 3 kolona cdo rresht*/
   grid-template-columns: auto auto auto;
 }
-  /*Elementet e Grid per MonthlyBest*/
+  /*Elementet e Grid*/
     .Element{
       text-align: center;
       height: fit-content;

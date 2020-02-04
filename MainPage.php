@@ -9,10 +9,10 @@
         <header class="header">
             <nav>
                 <ul>
-                    <li><a href="MainPageLogedIn.html">Home</a></li>
+                    <li><a href="MainPageLogedIn.php">Home</a></li>
                     <li><a href="">About</a></li>
-                    <li class="loginSingup"><a href="SignUp.html">Sign-up</a></li>
-                    <li class="loginSingup"><a href="Login.html">Login</a></li>
+                    <li class="loginSingup"><a href="SignUp.php">Sign-up</a></li>
+                    <li class="loginSingup"><a href="Login.php">Login</a></li>
                 </ul>
             </nav>
         </header>

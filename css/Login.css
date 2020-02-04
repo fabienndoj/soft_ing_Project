@@ -35,7 +35,7 @@ header{
     font-size: 2rem;
     position: relative;
     }
-#signup{float:right;}
+#signup{float:right; margin-right: 1.6rem;}
 nav,nav li,nav a{
     color: rgba(251, 245, 243, 0.7);
     display: inline;
