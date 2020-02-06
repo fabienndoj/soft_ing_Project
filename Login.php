@@ -2,28 +2,31 @@
 session_start();
 include("php\includes\includeDB.php");
 unset($_SESSION['login']);
+unset($_SESSION['username']);
+unset($_SESSION['userLevel']);
+unset($_SESSION['userId']);
 ?>
 <html>
-    <head>
-        <title>Login || Film ODDYSEY</title>
-
-        
-        <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css\Login.css">
-        
-    </head>
+<head>
+    <title>Film ODDYSEY</title>
+    <link rel="stylesheet" href="css\login.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
     <body>
         <?php
         include("php\includes\loginNav.php");
         if(isset($_POST['Login'])){
             $username=$_POST['username'];
             $userPassword=$_POST['password'];
-            $query="SELECT * FROM `user` WHERE username='$username' AND userPassword='$userPassword'";
+            $query="SELECT userId, username, userLevel FROM `user` WHERE username='$username' AND userPassword='$userPassword'";
             $result=mysqli_query($connection,$query);
-            $rows=mysqli_num_rows($result);
-            if($rows){
+            $row=mysqli_fetch_assoc($result);
+            if($row){
+                // Ka nevoje per rregullim kjo kam pershtypje
+                $_SESSION['userId']=$row['userId'];
                 $_SESSION['login']=1;
                 $_SESSION['username']=$username;
+                $_SESSION['userLevel']=$row['userLevel'];
                 header("Location:MainPageLogedIn.php");
             }
             else
@@ -33,7 +36,7 @@ unset($_SESSION['login']);
         <div class="trupi">
         <form action="Login.php" method="POST">
             <input type="text" name="username" placeholder="Username">
-            <div><input type="password" name="password" placeholder="Password"></div>
+            <div><input type="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"></div>
             <input type="submit" name="Login" value="Login">
         </form>
         </div>

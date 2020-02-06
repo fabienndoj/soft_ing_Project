@@ -1,3 +1,7 @@
+<?php
+session_start();
+unset($_SESSION['login']);
+?>
 <html>
 <head>
     <title>Home Page || Film ODDYSEY</title>

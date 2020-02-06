@@ -3,75 +3,26 @@ include("php\includes\includeSession.php");
 ?>
 <html>
 <head>
-    <title> Ranking || Film ODDYSEY</title>
-    <link rel="stylesheet" href="css\Ranking.css">
+    <title>Film ODDYSEY</title>
+    <link rel="stylesheet" href="css\MainPageLogedIn.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
-    
-
 </head>
 <body>
-
-    <header>
+<header>
     <?php 
         include("php\component\barNav.php");
-    ?>   
-    </header>   
-    <main>
-        <section class="SearchBox">
-            <form action="searchResult.php" method="GET">
-                <input type="text" name="rankingSearch" id="rankingSearch" placeholder="Search"> 
-            <div>
-                 <select name="genreId" id="genreId">
-                    <option value="" disabled selected>Based on Genre</option>
-                    <option value="1">Animated</option>
-                    <option value="2">Action</option>
-                    <option value="3">Adventure</option>
-                    <option value="4">Comedy</option>                        
-                    <option value="5">Crime</option>
-                    <option value="6">Drama</option>
-                    <option value="7">Epic</option>
-                    <option value="8">Horror</option>
-                    <option value="9">Musical</option>
-                    <option value="10">Sci-fi</option>
-                    <option value="11">War</option>
-                    <option value="12">Western</option>
-                </select>
-            
-            
-                <select name="RatingSelection" id="RatingSelection">
-                    <option value="" disabled selected>Based on Rating</option>
-                    <option value="9">9+</option>
-                    <option value="8">8+</option>
-                    <option value="7">7+</option>
-                    <option value="6">6+</option>
-                    <option value="5">5+</option>
-                    <option value="4">4+</option>
-                    <option value="3">3+</option>
-                    <option value="2">2+</option>
-                    <option value="1">1+</option>
-                </select>
-            
-            
-                <select name="orderMoviesBy" id="orderMoviesBy">
-                    <option value="" disabled selected>List based on:</option>
-                    <option value="1">Alphabetical</option>
-                    <option value="2">Year</option>
-                    <option value="3">Suggest</option>
-                </select>
-            </div>
-               
-            
-            <input type="submit" value="Search" id="searchButton">  
-            </form>
-                
-    </section>
-    <div class="list">
+    ?>  
+</header>
+        <div class="section__Header">The Search Result</div>
+            <!-- Grid -->
+        <div class="list">
         <!-- Elementi qe duhet perpunuar -->
 
             <!-- ******************PHP****************Generate Random Movie -->
             <?php
 include("php\includes\includeDB.php");
-$query="SELECT moviePoster,movieName,movieId FROM movie ORDER BY rand()";
+$searchInput=$_GET['rankingSearch'];
+$query="SELECT moviePoster,movieName,movieId FROM movie WHERE movieName LIKE '%$searchInput%'";
 $result=mysqli_query($connection,$query);
 
 while($row=mysqli_fetch_array($result)){
@@ -120,10 +71,8 @@ while($row=mysqli_fetch_array($result)){
                         </form>
             </div>';
         }
+
+
           
 ?> 
     </div> <!-- Mbyllja e elementin LIST -->
-    </div>
-    </main>
-</body>
-</html>

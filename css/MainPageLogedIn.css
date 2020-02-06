@@ -163,3 +163,11 @@ nav a:hover{
       }
     .suggest:active{transform: translateY(0rem);}
 
+    /* Disabled button edit*/
+:disabled{
+          background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(119, 119, 119));
+    }
+.Rate :disabled{
+  background-image: linear-gradient(to left,rgb(0, 0, 0),rgb(43, 38, 38));
+}
+
