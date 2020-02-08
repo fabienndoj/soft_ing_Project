@@ -10,5 +10,4 @@ if(isset($_GET['idRate'])){
     $queryRateResult=mysqli_query($connection,$queryRate);
     header("Location:..\..\MyProfile.php");
 }
-else echo "noo";
 ?>

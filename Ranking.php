@@ -19,7 +19,12 @@ include("php\includes\includeSession.php");
     <main>
         <section class="SearchBox">
             <form action="searchResult.php" method="GET">
-                <input type="text" name="rankingSearch" id="rankingSearch" placeholder="Search"> 
+                <input type="text" name="rankingSearch" id="rankingSearch" placeholder="Search">
+                <div>
+                <input type="submit" value="Search" id="searchButton">
+                </div>
+            </form> 
+            <form action="Ranking.php" method="GET">
             <div>
                  <select name="genreId" id="genreId">
                     <option value="" disabled selected>Based on Genre</option>
@@ -61,7 +66,7 @@ include("php\includes\includeSession.php");
             </div>
                
             
-            <input type="submit" value="Search" id="searchButton">  
+            <input type="submit" value="Order" id="searchButton">  
             </form>
                 
     </section>
