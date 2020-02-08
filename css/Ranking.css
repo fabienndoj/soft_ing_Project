@@ -68,10 +68,15 @@ nav a:hover{
     font-size: 1.6rem;
     margin: 4rem 1rem;
     background-color: rgb(17, 17, 17,.45);
-    height: 25rem;
+    height: 35rem;
 }
 form{
     position: relative;
+}
+.form__header{
+  text-align: center;
+  transform: scale(1.2);
+  color:#dbedf3;
 }
 #rankingSearch{
     background-color: rgb(0, 0, 0);
@@ -164,3 +169,7 @@ form{
 :disabled{
       background-image: linear-gradient(to right,rgb(255, 255, 255),rgb(119, 119, 119));
 }
+ .text--warning{
+   font-size: 1.2rem;
+   color: rgb(0, 134, 139);
+ }

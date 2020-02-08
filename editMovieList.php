@@ -24,9 +24,6 @@ if($_SESSION['userLevel']!=1){
             $position=$_GET['position'];
                 $updateQuery="UPDATE editor SET movieId=$movieId WHERE position=$position";
                 $resultUpdate=mysqli_query($connection,$updateQuery);
-                if($resultUpdate){
-                    echo 'The id:'.$movieId.' has been set to position:'.$position;
-                }
             }
     ?>
 <!-- **********SECTION HEADER & FORM TO UPDATE THE MOVIES*********** -->

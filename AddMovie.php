@@ -36,7 +36,7 @@ if($_SESSION['userLevel']!=1){
     ?>
     <div class="section__Header">Input information!</div>
     <div class="container">
-       <form action="AddMovie.php" method="GET">
+       <form action="AddMovie.php" method="GET" enctype="multipart/form-data">
         
         <div>
             Movie Name:<input type="text" name="movieName" required>
