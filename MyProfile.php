@@ -1,5 +1,6 @@
 <?php
 include("php\includes\includeSession.php");
+include("php\includes\includeDB.php");
 ?>
 <html>
 <head>
@@ -23,13 +24,14 @@ include("php\includes\includeSession.php");
         <!-- Elementi qe duhet perpunuar -->
 
             <!-- ******************PHP****************Generate Random Movie -->
-            <?php
-include("php\includes\includeDB.php");
-$query="SELECT moviePoster,movieName,movieId FROM movie ORDER BY movieYear DESC";
+<?php
+$query="SELECT * FROM `suggest` WHERE userId='".$_SESSION['userId']."' AND suggest=1";
 $result=mysqli_query($connection,$query);
 
-while($row=mysqli_fetch_array($result)){
-
+while($rowSuggest=mysqli_fetch_assoc($result)){
+    $querySuggest="SELECT moviePoster,movieName,movieId FROM movie WHERE movieId=".$rowSuggest['movieId'];
+    $resultSuggest=mysqli_query($connection,$querySuggest);
+    while($row=mysqli_fetch_array($resultSuggest)){
     echo '  <div class="Element">
                     <img src="data:image/jpeg;base64,'.base64_encode($row[0]).'" />
                     <div class="Element__nameAndInput">
@@ -63,18 +65,18 @@ while($row=mysqli_fetch_array($result)){
                         <form action="php\fun\validateSuggest.php" method="GET">
                                 <input type="text" name="idSuggest" value="'.$row[2].'" hidden>
                                 <input type="submit" name="suggest" class="suggest" value="Suggest"';
-                               
+                            
                                 $queryTestSuggest="SELECT suggest FROM suggest WHERE userId=".$_SESSION['userId']." AND movieId=$row[2]";
                                 $resultQueryTestSuggest=mysqli_query($connection, $queryTestSuggest);
                                 $rowSuggest=mysqli_num_rows($resultQueryTestSuggest);
-                                 if($rowSuggest==1){
+                                if($rowSuggest==1){
                                     echo ' disabled';
-                                 }
+                                }
                                 echo '>
                         </form>
             </div>';
         }
-          
+    }  
 ?> 
     </div> <!-- Mbyllja e elementin LIST -->
 </main>

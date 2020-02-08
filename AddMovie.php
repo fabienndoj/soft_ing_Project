@@ -1,6 +1,9 @@
 <?php 
 include("php\includes\includeDB.php");
 include("php\includes\includeSession.php");
+if($_SESSION['userLevel']!=1){
+    header("Location:MainPageLogedIn.php");
+}
 ?>
 
 <html>
@@ -22,10 +25,11 @@ include("php\includes\includeSession.php");
             $movieDirector=$_GET['movieDirector'];
             $movieGenre=$_GET['genreId'];
             $movieDescription=$_GET['movieDescription'];
+            $movieIMDB=$_GET['movieIMDB'];
             $movieYear=$_GET['movieYear'];
             $moviePoster=$_GET['moviePoster'];
             
-            $queryInputMovie="INSERT INTO `movie` (`movieId`, `movieName`, `movieDirector`, `movieGenre`, `movieDescription`, `movieYear`) VALUES (NULL,'$movieName','$movieDirector','$movieGenre','$movieDescription','$movieYear'";
+            $queryInputMovie="INSERT INTO `movie` (`movieId`, `movieName`, `movieDirector`, `movieGenre`, `movieDescription`, `movieYear`,'movieIMDB') VALUES (NULL,'$movieName','$movieDirector','$movieGenre','$movieDescription','$movieYear','$movieIMDB'";
             if(mysqli_query($connection,$queryInputMovie)) echo "SUCCESS";
             
         }
@@ -70,6 +74,10 @@ include("php\includes\includeSession.php");
         <div>
             Movie Synapses:
             <input type="text" name="movieDescription" class="movieDescription" required>
+        </div>
+        <div>
+            Movie IMDB Rating:
+            <input name="movieIMDB" class="movieIMDB" type="number" min="0" max="10" step="0.1" required>
         </div>
         <div>
             Movie Year:

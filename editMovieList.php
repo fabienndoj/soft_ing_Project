@@ -1,6 +1,9 @@
 <?php
 include("php\includes\includeSession.php");
 include("php\includes\includeDB.php");
+if($_SESSION['userLevel']!=1){
+    header("Location:MainPageLogedIn.php");
+}
 ?>
 <html>
 <head>
