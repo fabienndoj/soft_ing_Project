@@ -57,7 +57,6 @@ nav a:hover{
 .UserLogout{
   float: right;
 }
-/* Header Text and Below */
 .section__Header{
     text-transform: uppercase;
     text-align: center;
@@ -68,60 +67,25 @@ nav a:hover{
     margin: 2rem;
     
 }
-.container{
+.table--position{
     position: relative;
 }
-form {
-    background-color: rgb(0, 0, 0,.4);
-    font-size: 1.6rem;
-    font-weight: 500;
+table{
     color: #dbedf3;
-    text-align: left;
-    width: 50%;
+    width: 60%;
+  }
+.table__Poster{
+   width: 7rem;
+}
+.table__Poster img{
+    max-height: 10rem;
+}
+div{
+    position: relative;    
+}
+div input{
+    margin-top: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%);
-
 }
-form input,select{
-    float: right;
-    width: 40%;
-    margin-bottom: 1rem;
-}
-form div {
-    margin: 1rem;
-    border-bottom: rgb(126, 117, 117,.7) solid 0.05rem;
-    
-}
-.moviePoster{
-    padding: 0;
-}
-table{
-  margin: 1rem;
-  color: #dbedf3;
-  
-}
-
-.movie__text--left{
-  text-align: left;
-  color:#c72c41;
-}
-.movie_text--center{
-text-align: center;
-}
-img{
- max-width:33rem;
- border-radius: .5rem;
-}
-#toWatch{
-  position: relative;
-  width: 5%;
-}
-#addShporta{
-    background-color: rgb(0, 128, 0,0.4) ;
-}
-#addShporta:disabled{
-  background-color: rgb(0, 0, 0,0.4);
-}
-:focus { outline: none;}

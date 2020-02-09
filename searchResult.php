@@ -28,7 +28,7 @@ $result=mysqli_query($connection,$query);
 while($row=mysqli_fetch_array($result)){
 
     echo '  <div class="Element">
-                    <img src="data:image/jpeg;base64,'.base64_encode($row[0]).'" />
+    <a href="Movie.php?movieAppear=Appear&movieId='.$row[2].'"><img src="data:image/jpeg;base64,'.base64_encode($row[0]).'" /></a>
                     <div class="Element__nameAndInput">
                         <div>'.$row[1].'</div>   
                     </div>

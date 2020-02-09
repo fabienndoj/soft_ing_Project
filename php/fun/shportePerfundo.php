@@ -1,0 +1,19 @@
+<?php
+include("..\includes\includeSession.php");
+include("..\includes\includeDB.php");
+if($_SESSION['userLevel']==1){
+    header("Location:MainPageLogedIn.php");
+}
+if(!$_SESSION['login']=1){
+    header("Location:MainPageLogedIn.php");
+}
+?>
+<?php
+if(isset($_GET['shto'])){
+    for($i=0;$i<count($_GET['shto']);$i++){
+        $qry_insert="INSERT INTO watch(movieId,userId) VALUES('".$_GET['shto'][$i] ."','".$_SESSION['userId']."')";
+        $qryResult=mysqli_query($connection,$qry_insert);
+        }
+    header("Location:..\..\Shporta.php");
+}
+?>

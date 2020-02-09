@@ -12,6 +12,12 @@
                             <li><a href="editMovieList.php">Edit</a></li>
                             ';
                         }
+                        else if($_SESSION['userLevel']==2){
+                            echo 
+                            '
+                            <li><a href="Shporta.php">Shporta</a></li>
+                            ';
+                        }
     echo '
                         <li class="UserLogout"><a href="php\fun\LogOut.php">Logout</a></li>
                         <li class="UserLogout"><a href="MyProfile.php">My Profile</a></li>

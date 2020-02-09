@@ -16,8 +16,8 @@ include("php\includes\includeDB.php");
         <?php
         include("php\includes\loginNav.php");
         if(isset($_POST['Login'])){
-            $username=$_POST['username'];
-            $userPassword=$_POST['password'];
+            $username=mysqli_escape_string($connection,$_POST['username']);
+            $userPassword=mysqli_escape_string($connection,$_POST['password']);
             $query="SELECT userId, username, userLevel FROM `user` WHERE username='$username' AND userPassword='$userPassword'";
             $result=mysqli_query($connection,$query);
             $row=mysqli_fetch_assoc($result);
@@ -27,6 +27,7 @@ include("php\includes\includeDB.php");
                 $_SESSION['login']=1;
                 $_SESSION['username']=$username;
                 $_SESSION['userLevel']=$row['userLevel'];
+                
                 header("Location:MainPageLogedIn.php");
             }
             else
