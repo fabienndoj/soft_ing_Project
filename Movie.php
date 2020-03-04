@@ -23,7 +23,7 @@ if(isset($_GET['movieAppear'])){
         echo '<table><tr><td rowspan=7><img src="data:image/jpeg;base64,'.base64_encode($row["moviePoster"]).'" /></td></tr>';
         echo '<tr><td><span class="movie__text--left">Name:</span><span class="movie_text--center">'.$row["movieName"].'</span></td></tr>';
         echo '<tr><td><span class="movie__text--left">Year:</span><span class="movie_text--center">('.$row["movieYear"].')</span></td></tr>';
-        echo '<tr><td><span class="movie__text--left">Movie: Director</span><span class="movie_text--center">'.$row["directorName"].' '.$row["directorSurname"].'</span></td></tr>';
+        echo '<tr><td><span class="movie__text--left">Movie Director:</span><span class="movie_text--center">'.$row["directorName"].' '.$row["directorSurname"].'</span></td></tr>';
         echo '<tr><td><span class="movie__text--left">IMDB:</span><span class="movie_text--center">'.$row["movieIMDB"].'</td></tr>';
         echo '<tr><td><span class="movie__text--left">Synapses:</span><span class="movie_text--center">'.$row["movieDescription"].'</span></td></tr>';
         echo '<tr><td><span class="movie__text--left">Genre:</span><span class="movie_text--center">'.$row["genreName"].'</span></td></tr></table>';

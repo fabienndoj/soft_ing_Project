@@ -20,23 +20,24 @@ if($_SESSION['userLevel']!=1){
     </header>
     <!-- Insert Into Database -->
     <?php
-        if(isset($_GET['Add'])){
-            $movieName=$_GET['movieName'];
-            $movieDirector=$_GET['movieDirector'];
-            $movieGenre=$_GET['genreId'];
-            $movieDescription=$_GET['movieDescription'];
-            $movieIMDB=$_GET['movieIMDB'];
-            $movieYear=$_GET['movieYear'];
-            $moviePoster=$_GET['moviePoster'];
+        if(isset($POST['Add'])){
+            $movieName=$POST['movieName'];
+            $movieDirector=$POST['movieDirector'];
+            $movieGenre=$POST['genreId'];
+            $movieDescription=$POST['movieDescription'];
+            $movieIMDB=$POST['movieIMDB'];
+            $movieYear=$POST['movieYear'];
+            $moviePoster=$POST['moviePoster'];
+            $image = addslashes(file_get_contents($_FILES['moviePoster']['tmp_name']));
             
-            $queryInputMovie="INSERT INTO `movie` (`movieId`, `movieName`, `movieDirector`, `movieGenre`, `movieDescription`, `movieYear`,'movieIMDB') VALUES (NULL,'$movieName','$movieDirector','$movieGenre','$movieDescription','$movieYear','$movieIMDB'";
-            if(mysqli_query($connection,$queryInputMovie)) echo "SUCCESS";
+            $queryInputMovie="INSERT INTO `movie` (`movieId`, `movieName`, `movieDirector`, `movieGenre`, `movieDescription`, `movieYear`,'movieIMDB','moviePoster') VALUES (NULL,'$movieName','$movieDirector','$movieGenre','$movieDescription','$movieYear','$movieIMDB','{$image}'";
+            echo mysqli_error($connection,$queryInputMovie);
             
         }
     ?>
     <div class="section__Header">Input information!</div>
     <div class="container">
-       <form action="AddMovie.php" method="GET" enctype="multipart/form-data">
+       <form action="AddMovie.php" method="POST" enctype="multipart/form-data">
         
         <div>
             Movie Name:<input type="text" name="movieName" required>

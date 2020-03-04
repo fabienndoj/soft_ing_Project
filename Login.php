@@ -1,10 +1,6 @@
 <?php
 session_start();
 include("php\includes\includeDB.php");
-// unset($_SESSION['login']);
-// unset($_SESSION['username']);
-// unset($_SESSION['userLevel']);
-// unset($_SESSION['userId']);
 ?>
 <html>
 <head>
